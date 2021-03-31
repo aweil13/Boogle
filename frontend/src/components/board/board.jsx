@@ -1,6 +1,6 @@
 import React from 'react';
-import '../../stylesheets/board.css'
-import '../../stylesheets/reset.css';
+import '../../stylesheets/board.scss'
+import '../../stylesheets/reset.scss';
 
 class Board extends React.Component {
     constructor(props) {

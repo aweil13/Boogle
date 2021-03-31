@@ -1,6 +1,6 @@
 import React from 'react';
-import '../../stylesheets/main.css';
-import '../../stylesheets/reset.css';
+import '../../stylesheets/main.scss';
+import '../../stylesheets/reset.scss';
 
 class MainPage extends React.Component {
 
