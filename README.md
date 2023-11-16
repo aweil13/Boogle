@@ -157,7 +157,7 @@ This included adding a custom dropdown menu and icon whenever the navigation bar
 [9]: https://www.linkedin.com/in/brekke-andrew-green/
 [10]: https://github.com/Brekke-Green
 [11]: https://angel.co/u/brekke-andrew-green
-[12]: https://brekke-green.github.io/
+[12]: https://brekke-green.github.io/terminal/
 
 [13]: https://www.linkedin.com/in/marco-torre-388286138/
 [14]: https://github.com/OcramT
