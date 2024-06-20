@@ -1,0 +1,16 @@
+.timer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  padding: 5px;
+  height: 50px;
+  width: 200px;
+  margin: 10px;
+  color: rgb(26, 203, 255);
+}
+
+.alert {
+  color: tomato;
+}

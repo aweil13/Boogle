@@ -33,15 +33,6 @@ class Board {
             const die = new Die(letters[0]);
             this.grid.push(die.top);
         }
-        // for (let i = 0; i < this.size; i++) {
-        //     this.grid.push([]);
-        //     for (let j = 0; j < this.size; j++) {
-        //         const random = Math.floor(Math.random()*this.dice.length);
-        //         let letters = this.dice.splice(random, 1);
-        //         const die = new Die(letters[0]);
-        //         this.grid[i].push(die.top);
-        //     }
-        // }
     }
 }
 

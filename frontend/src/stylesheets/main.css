@@ -1,13 +1,13 @@
 .main-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    height: 100vh;
-    width: 100vw;
-    background: url('../images/main_bg.jpg');
-    background-size:cover;
-    background-repeat: round;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  height: 100vh;
+  width: 100vw;
+  background: url('../images/main_bg.jpg');
+  background-size:cover;
+  background-repeat: round;
 }
 
 

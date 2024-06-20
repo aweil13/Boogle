@@ -2,14 +2,15 @@ const Player = require("../gameLogic/player");
 const Game = require("../gameLogic/game"); 
 
 class GameServer {
-
     constructor(app, port) {
         this.server = require('http').createServer(app);
-        this.io = require('socket.io')(this.server, {
-            // cors: {
-            //     origin: "https://localhost:3000"
-            // }
-        });
+        const { Server } = require("socket.io");
+        const options =
+          process.env.NODE_ENV === "production"
+            ? {}
+            : { cors: { origin: "http://localhost:5173" } };
+          
+        this.io = new Server(this.server, options);
 
         this.io.on('connection', (socket)=> {
             socket.join("site");
@@ -110,7 +111,7 @@ class GameServer {
 
         
 
-        this.server.listen(port);
+        this.server.listen(port, () => console.log(`Server is running on port ${port}`));
 
         this.waitingRoom = [];
         this.games = {};

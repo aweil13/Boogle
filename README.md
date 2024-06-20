@@ -7,7 +7,7 @@ DisArray is a fast-paced, multi-player game inspired by Boggle! It is built with
 # <p align="center"> [Check Out the Live App!][17] </p>
 
 ## Game Play
-Players have a minute and a half per round to find as many words as they can in the given letter tiles. At the end of each round, the words found are scored as follows: 
+Players have a minute and a half per round to find as many words as they can in the given letter tiles. At the end of each round, the words found are scored as follows:
 * non-words: 0 points
 * words found by more than one player: 0 points
 * 3-4 letters: 1 point
@@ -19,6 +19,7 @@ Players have a minute and a half per round to find as many words as they can in 
 ![Round Results](README_assets/roundResultsModal.PNG)
 
 The results at the end of each round are keyed by color:
+
 * Green: Valid word with awarded points in brackets
 * Orange: Valid word awarded no points because it was found by at least one other player
 * Red (crossed off): Invalid word
@@ -26,7 +27,9 @@ The results at the end of each round are keyed by color:
 The player with the highest score after 3 rounds wins!
 
 ![End of Game Results](README_assets/endOfGameModal.PNG)
+
 ## Word Entry
+
 When forming words, no letter tile can be used more than once in a single word, and consecutive letters must be adjacent in the grid. Players enter words in one of two ways:
 
 * Click on each tile individually, in order. When the word is fully spelled, click "Submit Word".
@@ -48,7 +51,7 @@ When forming words, no letter tile can be used more than once in a single word, 
 <!-- ### ![Alejandro Weil](README_assets/Alejandro.jpg)**Alejandro Weil**  -->
 ### <img src="README_assets/Alejandro.jpg" width="150px"> **Alejandro Weil** [<img src="README_assets/linkedin-gray.svg" width='15px'>][1] [<img src="README_assets/github-gray.svg" width='16px'>][2] [<img src="README_assets/angellist-gray.svg" width='15px'>][3] [<img src="README_assets/portfolio-gray.svg" width='18px'>][4]
 
-Alejandro implemented the Backend database for user information using mongoDB, mongoose, and express. Users can create an account which will allow them to have their statistics(wins, losses) tracked and if they get enough wins, displayed on the live updating leaderboard. He also implemented the modals present in the app, using react redux to manipulate state to determine when to display modals or not. 
+Alejandro implemented the Backend database for user information using mongoDB, mongoose, and express. Users can create an account which will allow them to have their statistics(wins, losses) tracked and if they get enough wins, displayed on the live updating leaderboard. He also implemented the modals present in the app, using react redux to manipulate state to determine when to display modals or not.
 Conditional update to leaderboard based on if user won or not:
 
 ```js
@@ -71,7 +74,8 @@ Conditional update to leaderboard based on if user won or not:
 <!-- ### ![Brad Trick](README_assets/Brad.jpg)**Brad Trick**   -->
 ### <img src="README_assets/Brad.jpg" width="150px"> **Brad Trick** [<img src="README_assets/linkedin-gray.svg" width='15px'>][5] [<img src="README_assets/github-gray.svg" width='16px'>][6] [<img src="README_assets/angellist-gray.svg" width='15px'>][7] [<img src="README_assets/portfolio-gray.svg" width='18px'>][8]
 
-Brad implemented the game server and [socket.io](https://socket.io/) sockets that coordinate the flow of game elements across multiple clients on the web. The server and clients communicate through defined message types. For example, when the server receives a `chat` message from a client, it broadcasts the accompanying message to the appropriate `room`, either the other players in the game or, if the user is not currently in a game, the site more broadly: 
+Brad implemented the game server and [socket.io](https://socket.io/) sockets that coordinate the flow of game elements across multiple clients on the web. The server and clients communicate through defined message types. For example, when the server receives a `chat` message from a client, it broadcasts the accompanying message to the appropriate `room`, either the other players in the game or, if the user is not currently in a game, the site more broadly:
+
 ```js
 //board.jsx (Client)
 this.socket.emit('chat', {
@@ -90,6 +94,7 @@ socket.on("chat", ({gameId, username, msg}) => {
 ```
 
 Brad's main other responsibility was enabling users to enter words from the board. Event handlers monitor `mouseenter`, `mouseleave`, `mousedown`, and `mouseup` on the board tiles and store the results in the React state. For example, the handler for mouseleave submits the current word if the mouse leaves the board while creating a word through dragging:
+
 ```js
 handleMouseLeave(e) {
     const index = parseInt(e.currentTarget.dataset.index);
@@ -103,6 +108,7 @@ handleMouseLeave(e) {
     }
 }
 ```
+
 <!-- ### ![Brekke Green](README_assets/Brekke.jpg)**Brekke Andrew Green**  -->
 ### <img src="README_assets/Brekke.jpg" width="150px"> **Brekke Andrew Green** [<img src="README_assets/linkedin-gray.svg" width='15px'>][9] [<img src="README_assets/github-gray.svg" width='16px'>][10] [<img src="README_assets/angellist-gray.svg" width='15px'>][11] [<img src="README_assets/portfolio-gray.svg" width='18px'>][12]
 
@@ -143,7 +149,6 @@ This included adding a custom dropdown menu and icon whenever the navigation bar
 
 <p align="center"><img src="README_assets/burger-menu-min.gif"></p>
 
-
 [1]: https://www.linkedin.com/in/alejandro-weil-b9275720b/
 [2]: https://github.com/aweil13
 [3]: https://angel.co/u/alejandro-weil
@@ -165,4 +170,3 @@ This included adding a custom dropdown menu and icon whenever the navigation bar
 [16]: https://www.marcotorre.io/
 
 [17]: https://disarray-app.herokuapp.com/#/
-
