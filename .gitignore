@@ -1,4 +1,3 @@
-node_modules
-frontend-original/
+/node_modules
 keys_dev.js
 .DS_Store
