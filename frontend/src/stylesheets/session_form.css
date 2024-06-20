@@ -113,12 +113,3 @@
     height: 60px;
     cursor: pointer;
 }
-
-.submit:hover:not(.invalid) {
-  filter: brightness(120%);
-}
-
-.submit:active:not(.invalid) {
-  box-shadow: 0 0 0;
-  transform: translateY(0.125rem);
-}
